@@ -1,0 +1,172 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "drone",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "TakeofftIntent",
+                    "slots": [],
+                    "samples": [
+                        "taking off",
+                        "to take off"
+                    ]
+                },
+                {
+                    "name": "LandIntent",
+                    "slots": [],
+                    "samples": [
+                        "landing",
+                        "to touch down",
+                        "to land"
+                    ]
+                },
+                {
+                    "name": "DirectionIntent",
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "direction",
+                            "samples": [
+                                "{direction}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "to go {direction}"
+                    ]
+                },
+                {
+                    "name": "FlipIntent",
+                    "slots": [],
+                    "samples": [
+                        "to flip"
+                    ]
+                },
+                {
+                    "name": "RotateIntent",
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "direction",
+                            "samples": [
+                                "{direction}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "to rotate {direction}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "direction",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "forward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "back"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "left"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "DirectionIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "direction",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.810187448222.1211101232430"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "RotateIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "direction",
+                            "type": "direction",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1413325566616.86293029373"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.810187448222.1211101232430",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which direction?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1413325566616.86293029373",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which direction?"
+                    }
+                ]
+            }
+        ]
+    }
+}
