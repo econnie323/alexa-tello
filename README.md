@@ -10,4 +10,4 @@ Speak your verbal commands to Amazon Echo to control your drone. First, Alexa Sk
 
 This code is based on the Tello SDK documentation. To simplify the vocal interaction, each movement was fixed at 1 meter, the rotation at 90 degrees and the flip only forward.
 
-You can find more details at https://hackster.io
+You can find more details at https://www.hackster.io/econnie323/alexa-voice-controlled-tello-drone-760615
